@@ -1,4 +1,4 @@
-package com.fralermo.demo.apiproductos.application.mapper;
+package com.fralermo.demo.apiproductos.infra.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

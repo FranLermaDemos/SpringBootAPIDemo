@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fralermo.demo.apiproductos.domain.exception.ProductNotFoundException;
 import com.fralermo.demo.apiproductos.domain.model.Product;
 import com.fralermo.demo.apiproductos.domain.services.ProductUseCase;
 
@@ -16,7 +17,7 @@ public class ProductAPIController {
 	private ProductUseCase productUseCase;
 	
 	@GetMapping("/api/product/{id}")
-	public Product findById(@PathVariable Long id) {
+	public Product findById(@PathVariable Long id) throws ProductNotFoundException {
 		return this.productUseCase.findById(id).orElse(null);
 	}
 	

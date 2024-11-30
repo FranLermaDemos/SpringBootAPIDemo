@@ -1,4 +1,4 @@
-package com.fralermo.demo.apiproductos.infra.adapter.config;
+package com.fralermo.demo.apiproductos.infra.config.cache;
 
 import java.util.concurrent.TimeUnit;
 
